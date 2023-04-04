@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>This is my first MVC page</h1>
+@if(ViewData["studlist"]!=null){
+    <table class="table-bordered">
+
+        <tr>
+             <th> Name</th>
+            <th>City</th>
+            <th>Percentage</th>
+        </tr>
+        @foreach (Student s in (IEnumerable<Student>)ViewData["studlist"])
+        {
+          <tr>
+              <td>@s.Name</td>
+              <td>@s.City</td>
+              <td>@s.Percentage</td>
+
+
+              </tr>
+        }
+        
+    </table>
+}
+<h4> using viewbag</h4>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Salary</th>
+    </tr>
+    @foreach (Employee e in ViewBag.List)
+    {
+        <tr>
+            <td>@e.Id</td>
+            <td>@e.Name</td>
+            <td>@e.Salary</td>
+        </tr>
+    }
+</table>
