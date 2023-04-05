@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewData["Title"] = "EmployeeDetails";
+}
+
+<h4>Employee Details</h4>
+
+<form asp-action="EmployeeDetails">
+
+    <table>
+
+        <tr>
+            <td>Id</td>
+            <td>
+                @Html.TextBox("id")
+            </td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>
+                @Html.TextBox("name")
+            </td>
+
+        </tr>
+        <tr>
+            <td>Salary</td>
+            <td>
+                @Html.TextBox("salary")
+            </td>
+        </tr>
+        <tr>
+            <td>Select Department</td>
+            <td>
+                @Html.DropDownList("options")
+            </td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td>
+                @Html.CheckBox("gender","Male")Male
+                @Html.CheckBox("gender","Female")Female
+            </td>
+        </tr>
+
+        <tr>
+            <input type="submit" value="Save" class="btn btn-primary" />
+        </tr>
+
+
+    </table>
+
+</form>

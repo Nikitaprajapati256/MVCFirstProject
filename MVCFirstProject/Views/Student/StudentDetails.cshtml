@@ -1,0 +1,43 @@
+﻿
+
+@{
+    ViewData["Title"] = "StudentDetails";
+}
+<h4>
+    Student Details
+</h4>
+<form asp-action="StudentDetails">
+
+    <table>
+        <tr>
+            <td>Roll No</td>
+            <td>
+                @Html.TextBox("rollno")
+            </td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>
+                @Html.TextBox("name")
+            </td>
+        </tr>
+        <tr>
+            <td>Percentage</td>
+            <td>
+                @Html.TextBox("percentage")
+            </td>
+        </tr>
+        <tr>
+            <td>Stream</td>
+            <td>
+                @Html.DropDownList("options")
+            </td>
+        </tr>
+        <tr>
+            <input type="Submit" value="Save" class="btn btn-primary" />
+        </tr>
+
+    </table>
+
+
+</form>

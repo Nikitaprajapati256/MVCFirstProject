@@ -20,6 +20,7 @@ namespace MVCFirstProject.Controllers
                 "c#","SQL","MVC","Angular"
             };
             ViewData["list"]=courseList;
+            //ViewBag.List = courseList;
             List<Student> studentList = new List<Student>() {
             
             new Student{Name="Ajay",City="Mumbai",Percentage=88},
@@ -29,6 +30,7 @@ namespace MVCFirstProject.Controllers
 
             };
             ViewData["studlist"] = studentList;
+            
 
             List<Employee> emp = new List<Employee>()
             {
@@ -37,7 +39,7 @@ namespace MVCFirstProject.Controllers
                 new Employee{Id=103,Name="Sakshi",Salary=29000},
                 new Employee{Id=105,Name="Puja",Salary=35000},
             };
-            ViewBag.List = emp;
+            ViewBag.List = emp;  
 
             return View();
         }
